@@ -1,6 +1,37 @@
-import Estado.*
-import Alimento.*
+object alimento {
+	var nombre;
+	var tipo;
+	
+	method setNombre(_nombre){
+		nombre = _nombre		
+	}
+	method getNombre() {
+		return nombre
+	}
+	
+	method setTipo(_tipo){
+		tipo = _tipo		
+	}
+	method getTipo() {
+		return tipo
+	}
+}
 
+object estado {
+	var tipo;
+	
+	method setTipo(_tipo){
+		tipo = _tipo
+	}
+	
+	method getTipo(){
+		return tipo
+	}
+	
+	method Estado(){
+		tipo = "Normal"
+	}	
+}
 object pou {
 	var reirse;
 	var energia;
@@ -11,7 +42,7 @@ object pou {
 	var banio;
 	var durmio;
 	var edad;
-	var estado;
+	var estadoDeAnimo;
 	var historialAlimentos = new List();
 	var hambriento;
 	
@@ -20,7 +51,7 @@ object pou {
 		edad = _edad
 		reirse = true
 		luz = true
-		estado = new Estado("Normal")
+		estadoDeAnimo = estado.getTipo()
 	}
 	
 	method comer(alimento){
@@ -70,7 +101,7 @@ object pou {
 	
 	method salud(){
 		
-	}
-	
+	}	
 }
+
 
